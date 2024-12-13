@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c121f5569d.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap" rel="stylesheet">
+    <!-- css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #mobile-menu.open {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        #mobile-menu {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+         .image-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "image"
+                "text";
+             position: relative;
+        }
+        .image-section {
+             grid-area: image;
+             z-index: 1;
+             height: 100%;
+        }
+        .image-section > img {
+             width: 100%;
+             object-fit: cover;
+              height: 100%;
+        }
+        .text-section {
+            grid-area: text;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        </style>
+
+
+</head>
+<body>
+  <header class="fixed z-50 bg-white w-full">
+    <nav class="w-full px-4 py-4 md:px-0 mx-auto">
+      <div class="flex items-center justify-between md:justify-center relative">
+        
+        
+        <button id="menu-toggle" class="md:hidden block text-[#E9C686] focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+        
+                <div class="md:flex  md:justify-center w-full items-end">
+                  <ul class="hidden md:flex justify-between w-52 mr-16">
+                    <li><a href="posts.html" class="hover:text-[#E9C686] transition-colors duration-200">Posts</a></li>
+                    <li><a class="hover:text-[#E9C686] transition-colors duration-200" href="biodata.html">Biodata</a></li>
+                  </ul>
+                  
+                  <a href="index.html" class="mx-5 md:mb-1">
+                    <img class="w-[5.5rem]" src="assets/images/logo.png" alt="img" height="100px" width="100px" />
+                  </a>
+                  
+                  <ul class="hidden md:flex justify-between w-52 ml-16" id="nav-links">
+                    <li><a class="hover:text-[#E9C686] transition-colors duration-200" href="contact_us.html">Contact Us</a></li>
+                    <li><a class="hover:text-[#E9C686] transition-colors duration-200" href="freepage.html">Freepage</a></li>
+                  </ul>
+                </div>
+                <a class="self-center md:block hidden absolute right-0 hover:text-[#E9C686] ml-auto mr-[10px]" href="#"><img class="w-10" src="assets/images/bag.png" alt="shopping bag"></a>
+            </div>
+
+            
+            <div id="mobile-menu" class="md:hidden hidden absolute top-[8rem] left-0 bg-white w-full p-4 shadow-md rounded-b-xl">
+              <ul class="flex flex-col gap-4 text-center">
+                <li><a href="index.html" class="text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200">Home</a></li>
+                <li><a href="posts.html" class="hover:text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200">Posts</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200" href="biodata.html">Biodata</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200" href="contact_us.html">Contact Us</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 block py-2" href="freepage.html">Freepage</a></li>
+              </ul>
+            </div>
+            
+          </nav>
+        </header>
+        
+        <main id="home" class="flex flex-col gap-12">
+          <!-- halaman1 -->
+        <div class="relative pb-[70vh] md:pb-[560px]">
+            <div class="overflow-hidden absolute w-full h-[70vh] md:h-[500px]">
+                <img class="relative w-full h-full object-cover" src="assets/images/home1.webp" alt="img" />
+                <hr class="border-solid absolute border-white w-full top-1/5 md:top-32 border">
+            </div>
+        </div>
+
+        <!-- halaman2 -->
+        <div class="mx-auto w-56 text-center border solid border-black p-8 rounded-b-full">
+            <div class="flex flex-col gap-10">
+                <div class="font-['Amatic_sc'] text-4xl text-[#E9C686] border-b-4 w-fit mx-auto border-dotted border-black">
+                <h5>Papa Don Cafe</h5>
+                </div>
+                <div class="font-bold">
+                    <a href="#" class="underline">27-10 23rd Ave</p></a>
+                    <p>Astoria, NY 11105</p>
+                </div>
+                <p class="max-w-28 mx-auto text-sm">Martabak Manis Indo-Pancakes Boba Milk Teas Coffee & Teas ​</p>
+                <p class="max-w-40 mx-auto text-sm text-red-600 font-bold">Due to COVID restriction and staffing issue, there will be limited Martabak a day. Please pre-order a day in advance.</p>
+            </div>
+        </div>
+            
+         <!-- halaman3 -->
+          <div class="flex justify-center w-full overflow-hidden">
+           <div class="image-container max-w-full md:max-w-[750px] h-[500px] lg:h-fit">
+              <div class="text-section bg-[#FBF3E8CC] max-w-[90%] md:max-w-72 text-center -top-[200px] p-6 gap-6  flex flex-col">
+                   <h3 class="font-['Amatic_sc'] text-4xl font-black max-w-36 mx-auto border-b border-black ">King of Indo Street Food</h3>
+                    <P class="font-bold max-w-full md:max-w-52 mx-auto text-xs ">Martabak Manis is a popular street food in Indonesia that can be eaten as a sweet dessert or savory snack.</P>
+                    <P class="font-bold max-w-full md:max-w-52 mx-auto text-xs ">Martabak Manis, Indo-Pancake, is a thick pancake with the traditional filling of cheese, chocolate sprinkle, peanuts, and condense milk. </P>
+                    <a class="py-1 w-24 mx-auto rounded-full bg-black text-white text-xl font-['Amatic_sc']" href="#">MENU</a>
+              </div>
+                
+                <div class="image-section relative">
+                    <img  src="assets/images/carossel.webp" alt="img" />
+                </div>
+            </div>
+        </div>
+
+        <!-- halaman4 -->
+        <div class="w-full bg-gray-800 py-20 mb-5">
+            <div class="flex max-w-[450px] flex-col mx-auto bg-white text-center gap-2 p-10 items-center">
+                <h5 class="font-['Amatic_sc'] font-black text-4xl underline">Our Promise</h5>
+                <p>Indonesian food have always been known as a melting pot of flavors, with unique mix of ingredients that are sure to entice every last taste bud.</p>
+                <p>Here at Papa Don, we aspire to introduce those unique flavors.</p>
+            </div>
+        </div>
+
+        <!-- halaman5 -->
+        <div class="flex flex-col mx-auto items-center gap-2 text-center max-w-12 mb-24">
+            <h5 class="font-['Amatic_sc'] font-black text-4xl underline">INSTAGRAM</h5>
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CW1F4pKlT7o/" data-instgrm-version="14">
+            <div>
+                <a href="https://www.instagram.com/p/CW1F4pKlT7o/" style="color: #000; font-family: Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none" target="_blank"
+                >Lihat Postingan di Instagram</a
+                >
+            </div>
+            </blockquote>
+        </div>
+    </main>
+
+    <footer class="border-t-2 border-solid border-t-gray-300" >
+        <div class="flex flex-col w-96 mx-auto gap-16 text-center items-center pt-3 ">
+            <h3 class="font-['Amatic_sc'] tracking-widest text-4xl font-black">STAY SWEET</h3>
+            <div class="flex flex-col gap-5">
+                <ul class="flex gap-10">
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 text-gray-500" href="https://fti.unai.edu">FTI UNAI</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 text-gray-500" href="https://www.unai.edu">UNAI Website</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 text-gray-500" href="https://jurnal.unai.edu/index.php/teika">Jurnal Teika</a></li>
+                </ul>
+                <p class="text-gray-400">© 2024 All Rights Reserved</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- instagram -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- icon -->
+    <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>

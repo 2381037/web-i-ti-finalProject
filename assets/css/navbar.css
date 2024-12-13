@@ -1,0 +1,127 @@
+/* Navbar */
+.navbar {
+  background-color: white;
+  padding: 20px 30px;
+  position: relative;
+  border-bottom: 1px solid #424242;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: #424242;
+  text-decoration: none;
+  font-size: 1.2rem;
+  
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #333;
+    width: 250px;
+    padding-top: 60px;
+    transform: translateX(100%); /* Hide the nav by pushing it out of view */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links{
+    justify-content: start;
+  }
+
+  .nav-links li {
+    padding: 15px 20px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    text-align: left;
+    color: white;
+  }
+
+  /* Close Button (Only for Mobile) */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+  }
+
+  /* Show the close button only when the navigation is active on mobile */
+  .nav-links.nav-active .close-btn {
+    display: block; /* Show close button only on mobile */
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+
+  .hamburger span {
+    background-color: #424242;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+  }
+
+  /* Toggle the navigation visibility */
+  .nav-links.nav-active {
+    transform: translateX(0); /* Slide in from the right */
+  }
+}
+
+/* Hide close button in desktop */
+@media (min-width: 769px) {
+  .close-btn {
+    display: none !important;
+  }
+}

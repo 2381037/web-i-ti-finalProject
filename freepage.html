@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c121f5569d.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap" rel="stylesheet">
+    <!-- css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #mobile-menu.open {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        #mobile-menu {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+         .image-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "image"
+                "text";
+             position: relative;
+        }
+        .image-section {
+             grid-area: image;
+             z-index: 1;
+             height: 100%;
+        }
+        .image-section > img {
+             width: 100%;
+             object-fit: cover;
+              height: 100%;
+        }
+        .text-section {
+            grid-area: text;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        </style>
+
+
+</head>
+<body>
+  <header class="fixed z-50 bg-white w-full">
+    <nav class="w-full px-4 py-4 md:px-0 mx-auto">
+      <div class="flex items-center justify-between md:justify-center relative">
+        
+        
+        <button id="menu-toggle" class="md:hidden block text-[#E9C686] focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+        
+                <div class="md:flex  md:justify-center w-full items-end">
+                  <ul class="hidden md:flex justify-between w-52 mr-16">
+                    <li><a href="posts.html" class="hover:text-[#E9C686] transition-colors duration-200">Posts</a></li>
+                    <li><a class="hover:text-[#E9C686] transition-colors duration-200" href="biodata.html">Biodata</a></li>
+                  </ul>
+                  
+                  <a href="index.html" class="mx-5 md:mb-1">
+                    <img class="w-[5.5rem]" src="assets/images/logo.png" alt="img" height="100px" width="100px" />
+                  </a>
+                  
+                  <ul class="hidden md:flex justify-between w-52 ml-16" id="nav-links">
+                    <li><a class="hover:text-[#E9C686] transition-colors duration-200" href="contact_us.html">Contact Us</a></li>
+                    <li><a class="hover:text-[#E9C686] transition-colors duration-200" href="freepage.html">Freepage</a></li>
+                  </ul>
+                </div>
+                <a class="self-center md:block hidden absolute right-0 hover:text-[#E9C686] ml-auto mr-[10px]" href="#"><img class="w-10" src="assets/images/bag.png" alt="shopping bag"></a>
+            </div>
+
+            
+            <div id="mobile-menu" class="md:hidden hidden absolute top-[8rem] left-0 bg-white w-full p-4 shadow-md rounded-b-xl">
+              <ul class="flex flex-col gap-4 text-center">
+                <li><a href="index.html" class="text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200">Home</a></li>
+                <li><a href="posts.html" class="hover:text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200">Posts</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200" href="biodata.html">Biodata</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 block py-2 border-b border-gray-200" href="contact_us.html">Contact Us</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 block py-2" href="freepage.html">Freepage</a></li>
+              </ul>
+            </div>
+            
+          </nav>
+        </header>
+        
+        <main class="free-page-section flex flex-col items-center gap-8 py-12 pt-52">
+          <h1 class="font-['Amatic_sc'] text-5xl text-[#E9C686] font-bold">Welcome to the Free Page</h1>
+          <p class="font-['Open_Sans'] text-xl">ONE DIRECTION</p>
+    
+          <!-- Galeri -->
+          <section class="gallery">
+            <div class="gallery-grid grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              <img class="w-full object-cover h-48" src="assets/images/ripliam.jpg" alt="Sample Image 1" />
+              <img class="w-full object-cover h-48" src="assets/images//nialoran.jpg" alt="Sample Image 2" />
+              <img class="w-full object-cover h-48" src="assets/images//harrystyles.jpg" alt="Sample Image 3" />
+              <img class="w-full object-cover h-48" src="assets/images//zaynmalik.jpg" alt="Sample Image 4" />
+              <img class="w-full object-cover h-48" src="assets/images//onedirection1.jpg" alt="Sample Image 5" />
+              <img class="w-full object-cover h-48" src="assets/images//onedirection2.jpg" alt="Sample Image 6" />
+              <img class="w-full object-cover h-48" src="assets/images//onedirection3.jpg" alt="Sample Image 7" />
+              <img class="w-full object-cover h-48" src="assets/images//onedirection4.jpg" alt="Sample Image 8" />
+            </div>
+          </section>
+        </main>
+
+    <footer class="border-t-2 border-solid border-t-gray-300" >
+        <div class="flex flex-col w-96 mx-auto gap-16 text-center items-center pt-3 ">
+            <h3 class="font-['Amatic_sc'] tracking-widest text-4xl font-black">STAY SWEET</h3>
+            <div class="flex flex-col gap-5">
+                <ul class="flex gap-10">
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 text-gray-500" href="https://fti.unai.edu">FTI UNAI</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 text-gray-500" href="https://www.unai.edu">UNAI Website</a></li>
+                <li><a class="hover:text-[#E9C686] transition-colors duration-200 text-gray-500" href="https://jurnal.unai.edu/index.php/teika">Jurnal Teika</a></li>
+                </ul>
+                <p class="text-gray-400">© 2024 All Rights Reserved</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- instagram -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- icon -->
+    <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>

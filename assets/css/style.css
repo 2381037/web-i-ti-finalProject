@@ -1,0 +1,369 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #e5a521;
+  --border-color: black;
+
+  --font-amatic: "Amatic SC", sans-serif;
+}
+
+main {
+  padding-top: 168px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Home */
+#home .halaman1 {
+  height: 55vh;
+}
+
+#home .halaman2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .card-halaman2 {
+  width: 280px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  height: max-content;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+#home .card-halaman2 .header-cardHal1 {
+  display: flex;
+  justify-content: center;
+}
+
+#home .card-halaman2 h5 {
+  font-size: 2.5rem;
+  border-bottom: 5px dotted var(--border-color);
+  width: fit-content;
+  font-family: var(--font-amatic);
+  color: var(--primary-color);
+}
+
+#home .card-halaman2 :nth-child(2) {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#home .card-halaman2 :nth-child(3) {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+#home .card-halaman2 :nth-child(4) {
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+#home .card-halaman2 :nth-child(5) {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  font-weight: 600;
+  color: red;
+}
+
+#home .halaman3 {
+  /* min-height: 100vh; */
+  margin: 20px auto;
+  width: 80%;
+}
+#home .halaman4 {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color-card);
+
+  .card {
+    width: 500px;
+    padding: 30px;
+    background-color: var(--background-color);
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    font-family: var(--font-amatic);
+    color: var(--primary-color);
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+#home .halaman5 {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h5 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-align: center;
+    margin: 30px 0;
+    font-family: var(--font-amatic);
+  }
+
+  .instagram-media {
+    background-color: #2ecc71;
+  }
+}
+
+/* carossel */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Main Content Styles */
+
+.biodata-section {
+  min-height: 100vh;
+}
+
+.biodata-section h1,
+.contact-section h1,
+.free-page-section h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--font-amatic);
+  font-size: 2.8rem;
+
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.bio-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+
+  /* Menambahkan bayangan hitam lembut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+/* contact */
+.contact-section {
+  display: flex;
+  justify-content: center;
+}
+
+.form-contact {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Gaya untuk Radio Group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  p {
+    margin: 0;
+  }
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-option input[type="radio"] {
+  margin: 0; /* Menghilangkan margin default */
+  width: 18px;
+  height: 18px;
+}
+
+/* Checkbox Option */
+.checkbox-group {
+  p {
+    margin: 0;
+  }
+  margin-bottom: 10px;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-option input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background-color: #e94560;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #16213e;
+}
+
+
+
+/* free-page-section */
+
+.free-page-section{
+  margin: 0 2rem;
+  p{
+    text-align: center;
+  }
+}
+.gallery {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efek hover pada gambar */
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0 1rem;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 1rem;
+}
